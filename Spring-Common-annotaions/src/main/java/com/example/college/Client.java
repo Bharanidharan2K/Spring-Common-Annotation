@@ -9,6 +9,7 @@ public class Client {
 		System.out.println("Config loaded");
 		College college = context.getBean("collegeObj", College.class);
 		college.test();
+		((AnnotationConfigApplicationContext)context).close();
 		
 	}
 }
